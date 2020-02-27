@@ -1,0 +1,95 @@
+<html ng-app="app" ng-controller="NotasCtrl">
+
+
+ <!-- CADASTRO -->
+
+ <div class="esquerdaNotas">
+    
+
+    <h1 class="tituloEnotas"> Aluno:</h1>
+
+    <div ng-init="buscar()" class="textBar1">
+
+      <select ng-model="alunos">
+
+          <option  value={{aluno.id}} ng-model="aluno" ng-repeat="aluno in alunoList">{{aluno.nome}}</option>
+
+      </select>
+
+   </div>
+    
+    <h1 class="titulo2Enotas"> Disciplina:</h1>
+
+    <div ng-init="add()" class="textBar2">
+
+      <select ng-model="materia">
+
+         <option value="{{materias.id}}" ng-model="materia" ng-repeat ="materias in materiaList"> {{materias.disciplina}}</option>
+
+      </select>
+
+    </div>
+
+    <h1 class="titulo3Enotas"> Notas:</h1>
+ 
+    <h1 class="sampleEnota1"> 1ª:</h1> 
+
+    <h1 class="sampleEnota2"> 2ª:</h1> 
+
+    <h1 class="sampleEnota3"> 3ª:</h1> 
+
+
+<input class="notasE1" name="nota1" ng-model="nota1"> <br>
+
+<input class="notasE2" name="nota2" ng-model="nota2"> <br>
+
+<input class="notasE3" name="nota3" ng-model="nota3"> <br>
+
+</div> 
+
+   <button class="botaoEnotas" ng-click="cadastra(alunos,materia,nota1,nota2,nota3)" type="text" >Salvar</button>
+
+</html>
+<!-- CADASTRO -->
+
+
+
+<!--  EDITAR -->
+
+ <!-- <div class="centroNotas">
+    <h1 class="tituloDnotas"> Disciplina:</h1>
+
+    <input class="textCnotas" id="aluno" size="25" name="aluno"> <br>
+
+ </div> 
+
+<div class="esquerdaNotas">
+    
+<h1 class="tituloEnotas"> Aluno:</h1>
+
+<input class="textEnotas" id="aluno" size="25" name="aluno"> <br>
+
+</div> 
+
+<-- EDITAR --> 
+
+
+
+<!--  EXCLUIR -->
+
+ <!-- <div class="direitaNotas">
+    <h1 class="tituloDnotas"> Disciplina:</h1>
+
+    <input class="textDnotas" id="aluno" size="25" name="aluno"> <br>
+
+ </div> 
+
+<div class="esquerdaNotas">
+    
+<h1 class="tituloEnotas"> Aluno:</h1>
+
+<input class="textEnotas" id="aluno" size="25" name="aluno"> <br>
+
+</div> 
+
+<-- EXCLUIR --> 

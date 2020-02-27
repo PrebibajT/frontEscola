@@ -1,0 +1,23 @@
+
+<html ng-app="app" ng-controller="BoletimCtrl">
+<div class="teto">
+    
+
+    <h1 class="tituloBoletim">Selecione o aluno a ter o boletim impresso</h1>
+
+    <div ng-init="buscar()" class="boletim">
+
+        <select ng-model="alunos">
+  
+            <option  value={{aluno.id}} ng-model="aluno" ng-repeat="aluno in alunoList">{{aluno.nome}}</option>
+  
+        </select>
+  
+     </div>
+
+     <button class="botaoBoletim" ng-click="imprimir(alunos)" type="Long" >Imprimir</button>
+
+
+</div>
+
+</html>
