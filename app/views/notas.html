@@ -19,9 +19,9 @@
 
     <div ng-init="add()" class="textBar2">
 
-      <select ng-model="materia">
+      <select ng-model="materias">
 
-         <option value="{{materias.id}}" ng-model="materia" ng-repeat ="materias in materiaList"> {{materias.disciplina}}</option>
+         <option value="{{materia.id}}" ng-model="materia" ng-repeat ="materia in materiaList"> {{materia.disciplina}}</option>
 
       </select>
 
@@ -44,6 +44,6 @@
 
 </div> 
 
-   <button class="botaoEnotas" ng-click="cadastra(alunos,materia,nota1,nota2,nota3)" type="text" >Salvar</button>
+   <button class="botaoEnotas" ng-click="cadastra(alunos,materias,nota1,nota2,nota3)" type="text" >Salvar</button>
 
 </html>

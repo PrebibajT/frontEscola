@@ -25,6 +25,8 @@ app.controller('NotasCtrl', function ($scope, $http) {
         $http.get('http://localhost:8080/materia', data).then(function (response) {
 
             $scope.materiaList = response.data;
+
+            
         
 
         });
@@ -41,8 +43,7 @@ app.controller('NotasCtrl', function ($scope, $http) {
 
         $http.post('http://localhost:8080/notas', data).then(function (response) {
 
-            $scope.materiaList = response.data;
-        
+         
 
         });
     };
